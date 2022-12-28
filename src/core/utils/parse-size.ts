@@ -13,13 +13,17 @@ type Options = {
 };
 
 export const parseSize = (
-  size: Size,
+  size?: Size,
   {
     baseFontSize = defaultBaseFontSize,
     inputSizeUnit = SizeUnit.Pixel,
     outputSizeUnit = SizeUnit.Rem,
   }: Options = {}
 ) => {
+  if (size === undefined) {
+    return size
+  }
+
   if (typeof size === 'string') {
     return sizeAliasMap[size] || size;
   }
