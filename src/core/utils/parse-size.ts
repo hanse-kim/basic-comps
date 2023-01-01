@@ -1,10 +1,12 @@
 import { baseFontSize as defaultBaseFontSize } from '../constants';
 import { Size, SizeUnit } from '../types';
 
-const sizeAliasMap: Record<string, string> = {
+const sizeAliasMap = {
   px: '1px',
   full: '9999px',
-};
+} as const;
+
+export type SizeAlias = keyof typeof sizeAliasMap;
 
 type Options = {
   baseFontSize?: number;
@@ -21,11 +23,11 @@ export const parseSize = (
   }: Options = {}
 ) => {
   if (size === undefined) {
-    return size
+    return size;
   }
 
   if (typeof size === 'string') {
-    return sizeAliasMap[size] || size;
+    return isSizeAlias(size) ? sizeAliasMap[size] : size;
   }
 
   let sizeValue = size;
@@ -39,4 +41,8 @@ export const parseSize = (
   }
 
   return `${sizeValue}${outputSizeUnit}`;
+};
+
+const isSizeAlias = (size: string): size is SizeAlias => {
+  return size in sizeAliasMap;
 };
