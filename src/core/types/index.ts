@@ -1,6 +1,9 @@
 import { fontWeights, zIndices } from '../constants';
+import { SizeAlias } from '../utils/parse-size';
 
-export type Size = number | string;
+type UnionString<T> = T | (string & {});
+
+export type Size = number | UnionString<SizeAlias>;
 export enum SizeUnit {
   Pixel = 'px',
   Rem = 'rem',
