@@ -8,7 +8,7 @@ const sizeAliasMap = {
 
 export type SizeAlias = keyof typeof sizeAliasMap;
 
-type Options = {
+export type ParseSizeOptions = {
   baseFontSize?: number;
   inputSizeUnit?: SizeUnit;
   outputSizeUnit?: SizeUnit;
@@ -20,7 +20,7 @@ export const parseSize = (
     baseFontSize = defaultBaseFontSize,
     inputSizeUnit = SizeUnit.Pixel,
     outputSizeUnit = SizeUnit.Rem,
-  }: Options = {}
+  }: ParseSizeOptions = {}
 ) => {
   if (size === undefined) {
     return size;

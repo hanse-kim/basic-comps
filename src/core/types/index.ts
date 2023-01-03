@@ -9,5 +9,11 @@ export enum SizeUnit {
   Rem = 'rem',
 }
 
+export type Space =
+  | Size
+  | [Size, Size]
+  | [Size, Size, Size]
+  | [Size, Size, Size, Size];
+
 export type FontWeight = keyof typeof fontWeights | number;
 export type ZIndex = keyof typeof zIndices | number;
