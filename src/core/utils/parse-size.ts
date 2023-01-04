@@ -15,15 +15,15 @@ export type ParseSizeOptions = {
 };
 
 export const parseSize = (
-  size?: Size,
+  size?: Size | false,
   {
     baseFontSize = defaultBaseFontSize,
     inputSizeUnit = SizeUnit.Pixel,
     outputSizeUnit = SizeUnit.Rem,
   }: ParseSizeOptions = {}
 ) => {
-  if (size === undefined) {
-    return size;
+  if (size === undefined || size === false) {
+    return undefined;
   }
 
   if (typeof size === 'string') {

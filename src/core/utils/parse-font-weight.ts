@@ -1,9 +1,9 @@
 import { fontWeights } from '../constants';
 import { FontWeight } from '../types';
 
-export const parseFontWeight = (fontWeight?: FontWeight) => {
-  if (fontWeight === undefined) {
-    return fontWeight
+export const parseFontWeight = (fontWeight?: FontWeight | false) => {
+  if (fontWeight === undefined || fontWeight === false) {
+    return undefined;
   }
 
   if (typeof fontWeight === 'number') {
