@@ -14,14 +14,17 @@ export type ParseSizeOptions = {
   outputSizeUnit?: SizeUnit;
 };
 
-export const parseSize = (
+export function parseSize(size: Size, options?: ParseSizeOptions): string;
+export function parseSize(size?: false, options?: ParseSizeOptions): undefined;
+
+export function parseSize(
   size?: Size | false,
   {
     baseFontSize = defaultBaseFontSize,
     inputSizeUnit = SizeUnit.Pixel,
     outputSizeUnit = SizeUnit.Rem,
   }: ParseSizeOptions = {}
-) => {
+) {
   if (size === undefined || size === false) {
     return undefined;
   }
@@ -41,7 +44,7 @@ export const parseSize = (
   }
 
   return `${sizeValue}${outputSizeUnit}`;
-};
+}
 
 const isSizeAlias = (size: string): size is SizeAlias => {
   return size in sizeAliasMap;
