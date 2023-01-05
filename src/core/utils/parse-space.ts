@@ -16,30 +16,45 @@ export const parseSpace = (
     return {};
   }
 
+  let spaceArray: string[];
+
   if (!Array.isArray(space)) {
-    space = parseSize(space, parseSizeOptions);
-    return { left: space, right: space, top: space, bottom: space };
+    spaceArray = parseSize(space).split(' ');
+  } else {
+    spaceArray = space.map((spaceValue) =>
+      parseSize(spaceValue, parseSizeOptions)
+    );
   }
 
-  const spaceArray = space.map((spaceValue) =>
-    parseSize(spaceValue, parseSizeOptions)
-  );
+  if (spaceArray.length === 1) {
+    const [spaceValue] = spaceArray;
+    return {
+      left: spaceValue,
+      right: spaceValue,
+      top: spaceValue,
+      bottom: spaceValue,
+    };
+  }
 
-  if (space.length === 2) {
+  if (spaceArray.length === 2) {
     const [spaceY, spaceX] = spaceArray;
     return { left: spaceX, right: spaceX, top: spaceY, bottom: spaceY };
   }
 
-  if (space.length === 3) {
+  if (spaceArray.length === 3) {
     const [spaceTop, spaceX, spaceBottom] = spaceArray;
     return { left: spaceX, right: spaceX, top: spaceTop, bottom: spaceBottom };
   }
 
-  const [spaceTop, spaceRight, spaceBottom, spaceLeft] = spaceArray;
-  return {
-    left: spaceLeft,
-    top: spaceTop,
-    right: spaceRight,
-    bottom: spaceBottom,
-  };
+  if (spaceArray.length === 4) {
+    const [spaceTop, spaceRight, spaceBottom, spaceLeft] = spaceArray;
+    return {
+      left: spaceLeft,
+      top: spaceTop,
+      right: spaceRight,
+      bottom: spaceBottom,
+    };
+  }
+
+  return {};
 };
