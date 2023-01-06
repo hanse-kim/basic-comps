@@ -1,7 +1,7 @@
 import { zIndices } from '../constants';
 import { ZIndex } from '../types';
 
-export const parseZIndex = (zIndex?: ZIndex | false) => {
+export function parseZIndex(zIndex?: ZIndex | false) {
   if (zIndex === undefined || zIndex === false) {
     return undefined;
   }
@@ -11,4 +11,4 @@ export const parseZIndex = (zIndex?: ZIndex | false) => {
   }
 
   return zIndices[zIndex];
-};
+}

@@ -8,10 +8,10 @@ type ParsedSpace = {
   bottom?: string;
 };
 
-export const parseSpace = (
+export function parseSpace(
   space?: Space | false,
   parseSizeOptions: ParseSizeOptions = {}
-): ParsedSpace => {
+): ParsedSpace {
   if (space === undefined || space === false) {
     return {};
   }
@@ -57,4 +57,4 @@ export const parseSpace = (
   }
 
   return {};
-};
+}

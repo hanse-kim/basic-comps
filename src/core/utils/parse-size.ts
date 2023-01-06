@@ -46,6 +46,6 @@ export function parseSize(
   return `${sizeValue}${outputSizeUnit}`;
 }
 
-const isSizeAlias = (size: string): size is SizeAlias => {
+function isSizeAlias(size: string): size is SizeAlias {
   return size in sizeAliasMap;
-};
+}
