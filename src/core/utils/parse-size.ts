@@ -15,7 +15,10 @@ export type ParseSizeOptions = {
 };
 
 export function parseSize(size: Size, options?: ParseSizeOptions): string;
-export function parseSize(size?: false, options?: ParseSizeOptions): undefined;
+export function parseSize(
+  size?: Size | false,
+  options?: ParseSizeOptions
+): undefined;
 
 export function parseSize(
   size?: Size | false,
