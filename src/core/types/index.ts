@@ -11,9 +11,9 @@ export enum SizeUnit {
 
 export type Space =
   | Size
-  | [Size, Size]
-  | [Size, Size, Size]
-  | [Size, Size, Size, Size];
+  | [topAndBottom: Size, leftAndRight: Size]
+  | [top: Size, leftAndRight: Size, bottom: Size]
+  | [top: Size, right: Size, bottom: Size, left: Size];
 
 export type FontWeight = keyof typeof fontWeights | number;
 export type ZIndex = keyof typeof zIndices | number;
