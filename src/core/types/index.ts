@@ -4,10 +4,7 @@ import { SizeAlias } from '../utils/parse-size';
 type UnionString<T> = T | (string & {});
 
 export type Size = number | UnionString<SizeAlias>;
-export enum SizeUnit {
-  Pixel = 'px',
-  Rem = 'rem',
-}
+export type SizeUnit = 'px' | 'rem';
 
 export type Space =
   | Size

@@ -24,8 +24,8 @@ export function parseSize(
   size?: Size | false,
   {
     baseFontSize = defaultBaseFontSize,
-    inputSizeUnit = SizeUnit.Pixel,
-    outputSizeUnit = SizeUnit.Rem,
+    inputSizeUnit = 'px',
+    outputSizeUnit = 'rem',
   }: ParseSizeOptions = {}
 ) {
   if (size === undefined || size === false) {
@@ -38,11 +38,11 @@ export function parseSize(
 
   let sizeValue = size;
 
-  if (inputSizeUnit === SizeUnit.Pixel && outputSizeUnit === SizeUnit.Rem) {
+  if (inputSizeUnit === 'px' && outputSizeUnit === 'rem') {
     sizeValue = size / baseFontSize;
   }
 
-  if (inputSizeUnit === SizeUnit.Rem && outputSizeUnit === SizeUnit.Pixel) {
+  if (inputSizeUnit === 'rem' && outputSizeUnit === 'px') {
     sizeValue = size * baseFontSize;
   }
 
