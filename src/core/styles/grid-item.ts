@@ -1,5 +1,5 @@
-import { css } from "@emotion/react";
-import { CSSProperties } from "react";
+import { css } from '@emotion/react';
+import { CSSProperties } from 'react';
 
 export type GridItemProps = {
   gridArea?: CSSProperties['gridArea'];
@@ -15,4 +15,4 @@ export type GridItemProps = {
 
 export const gridItemStyles = (props: GridItemProps) => {
   return css(props);
-}
+};

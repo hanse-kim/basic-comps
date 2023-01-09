@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
-import { parseSize } from '../utils/parse-size';
+import { parseSize } from '../utils';
 
 export type FlexboxProps = {
   order?: CSSProperties['order'];

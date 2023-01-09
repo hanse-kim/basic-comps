@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
-import { parseColor } from '../utils/parse-color';
-import { parseSize } from '../utils/parse-size';
+import { parseColor, parseSize } from '../utils';
 
 export type BackgroundProps = {
   background?: CSSProperties['background'];
