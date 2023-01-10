@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { Size, Space } from '../types';
 import { parseSpace } from '../utils';
+import { getDefined } from '../utils/get-defined';
 
 export type SpaceProps = {
   margin?: Space;
@@ -22,16 +23,36 @@ export type SpaceProps = {
 
 export const spaceStyles = (props: SpaceProps) => {
   const margin = parseSpace(props.margin);
-  const marginLeft = props.marginLeft || props.marginX || margin.left;
-  const marginRight = props.marginRight || props.marginX || margin.right;
-  const marginTop = props.marginTop || props.marginY || margin.top;
-  const marginBottom = props.marginBottom || props.marginY || margin.bottom;
+  const marginLeft = getDefined(props.marginLeft, props.marginX, margin.left);
+  const marginRight = getDefined(
+    props.marginRight,
+    props.marginX,
+    margin.right
+  );
+  const marginTop = getDefined(props.marginTop, props.marginY, margin.top);
+  const marginBottom = getDefined(
+    props.marginBottom,
+    props.marginY,
+    margin.bottom
+  );
 
   const padding = parseSpace(props.padding);
-  const paddingLeft = props.paddingLeft || props.paddingX || padding.left;
-  const paddingRight = props.paddingRight || props.paddingX || padding.right;
-  const paddingTop = props.paddingTop || props.paddingY || padding.top;
-  const paddingBottom = props.paddingBottom || props.paddingY || padding.bottom;
+  const paddingLeft = getDefined(
+    props.paddingLeft,
+    props.paddingX,
+    padding.left
+  );
+  const paddingRight = getDefined(
+    props.paddingRight,
+    props.paddingX,
+    padding.right
+  );
+  const paddingTop = getDefined(props.paddingTop, props.paddingY, padding.top);
+  const paddingBottom = getDefined(
+    props.paddingBottom,
+    props.paddingY,
+    padding.bottom
+  );
 
   return css({
     marginLeft,

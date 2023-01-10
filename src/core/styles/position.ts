@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size, ZIndex } from '../types';
 import { parseSize, parseZIndex } from '../utils';
+import { getDefined } from '../utils/get-defined';
 
 export type PositionProps = {
   position?: CSSProperties['position'];
@@ -18,10 +19,10 @@ export type PositionProps = {
 export const positionStyles = (props: PositionProps) => {
   const { position, inset, insetX, insetY, zIndex } = props;
 
-  const left = props.left || insetX || inset;
-  const right = props.right || insetX || inset;
-  const top = props.top || insetY || inset;
-  const bottom = props.bottom || insetY || inset;
+  const left = getDefined(props.left, insetX, inset);
+  const right = getDefined(props.right, insetX, inset);
+  const top = getDefined(props.top, insetY, inset);
+  const bottom = getDefined(props.bottom, insetY, inset);
 
   return css({
     position,
