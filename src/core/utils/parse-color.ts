@@ -10,5 +10,5 @@ export function parseColor(color?: string | false, colors?: Colors) {
     return color;
   }
 
-  return getValueByFlattedKey(color, colors);
+  return getValueByFlattedKey(color, colors) || color;
 }
