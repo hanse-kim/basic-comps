@@ -1,24 +1,24 @@
-import { RecursiveObject } from '../types';
+import { Primitive, RecursiveObject } from '../types';
 
-export function getValueByFlattedKey<T>(
+export function getValueByFlattedKey<T extends Primitive>(
   flattedKey: string,
   obj: RecursiveObject<T>
 ): T | undefined {
   const splitted = flattedKey.split('.');
-  let result: RecursiveObject<T> | T = obj;
+  let result: RecursiveObject<T> | T | undefined = obj;
 
   while (splitted.length > 0 && result !== undefined) {
     const key = splitted.shift();
-    if (!key || !isRecursiveObject(result)) {
+    if (!key || typeof result !== 'object') {
       break;
     }
 
     result = result[key];
   }
 
-  return isRecursiveObject(result) ? undefined : result;
-}
+  if (typeof result === 'object') {
+    return undefined;
+  }
 
-function isRecursiveObject<T>(obj: unknown): obj is RecursiveObject<T> {
-  return typeof obj === 'object';
+  return result;
 }
