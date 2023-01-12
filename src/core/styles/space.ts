@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 import { Size, Space } from '../types';
-import { parseSpace } from '../utils';
-import { getDefined } from '../utils/get-defined';
+import { getDefined, parseSpace } from '../utils';
 
 export type SpaceProps = {
   margin?: Space;

@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size, ZIndex } from '../types';
-import { parseSize, parseZIndex } from '../utils';
-import { getDefined } from '../utils/get-defined';
+import { getDefined, parseSize, parseZIndex } from '../utils';
 
 export type PositionProps = {
   position?: CSSProperties['position'];
