@@ -1,3 +1,4 @@
+import { CSSProperties } from '@emotion/serialize';
 import { fontWeights, zIndices } from '../constants';
 import { SizeAlias } from '../utils/parse-size';
 
@@ -20,3 +21,7 @@ export type FontWeight = keyof typeof fontWeights | number;
 export type ZIndex = keyof typeof zIndices | number;
 
 export type Colors = RecursiveObject<string>;
+
+export type Border =
+  | string
+  | [Size, CSSProperties['borderStyle'], string];
