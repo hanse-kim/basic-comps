@@ -24,10 +24,33 @@ export type FlexboxProps = {
 };
 
 export const flexboxStyles = (props: FlexboxProps) => {
-  const { gap, rowGap, columnGap } = props;
+  const {
+    order,
+    justifyContent,
+    alignItems,
+    flexFlow,
+    flexWrap,
+    flexDirection,
+    flex,
+    flexGrow,
+    flexShrink,
+    flexBasis,
+    gap,
+    rowGap,
+    columnGap,
+  } = props;
 
   return css({
-    ...props,
+    order,
+    justifyContent,
+    alignItems,
+    flexFlow,
+    flexWrap,
+    flexDirection,
+    flex,
+    flexGrow,
+    flexShrink,
+    flexBasis,
     gap: parseSize(gap),
     rowGap: parseSize(rowGap),
     columnGap: parseSize(columnGap),

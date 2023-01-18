@@ -10,5 +10,14 @@ export type EffectProps = {
 };
 
 export const effectStyles = (props: EffectProps) => {
-  return css(props);
+  const { filter, boxShadow, opacity, mixBlendMode, backgroundBlendMode } =
+    props;
+
+  return css({
+    filter,
+    boxShadow,
+    opacity,
+    mixBlendMode,
+    backgroundBlendMode,
+  });
 };

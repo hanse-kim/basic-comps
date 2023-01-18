@@ -18,6 +18,7 @@ import {
   LayoutProps,
   layoutStyles,
   ParagraphProps,
+  paragraphStyles,
   PositionProps,
   positionStyles,
   SpaceProps,
@@ -48,6 +49,7 @@ export const Box = styled.div<BoxProps>`
   ${(props) => gridStyles(props)}
   ${(props) => gridItemStyles(props)}
   ${(props) => layoutStyles(props)}
+  ${(props) => paragraphStyles(props)}
   ${(props) => positionStyles(props)}
   ${(props) => spaceStyles(props)}
   ${(props) => transitionStyles(props)}

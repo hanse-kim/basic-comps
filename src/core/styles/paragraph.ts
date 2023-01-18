@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { FontWeight, Size } from '../types';
-import { parseColor, parseSize } from '../utils';
+import { parseColor, parseFontWeight, parseSize } from '../utils';
 
 export type ParagraphProps = {
   color?: CSSProperties['color'];
@@ -22,12 +22,34 @@ export type ParagraphProps = {
 };
 
 export const paragraphStyles = (props: ParagraphProps) => {
-  const { color, fontColor, fontSize, lineThrough, underline, lines } = props;
+  const {
+    color,
+    fontColor,
+    fontSize,
+    fontWeight,
+    letterSpacing,
+    textAlign,
+    whiteSpace,
+    wordBreak,
+    wordSpacing,
+    lineHeight,
+    textShadow,
+    lineThrough,
+    underline,
+    lines,
+  } = props;
 
   return css({
-    ...props,
     color: parseColor(fontColor || color),
     fontSize: parseSize(fontSize),
+    fontWeight: parseFontWeight(fontWeight),
+    letterSpacing,
+    textAlign,
+    whiteSpace,
+    wordBreak,
+    wordSpacing,
+    lineHeight,
+    textShadow,
     textDecoration: lineThrough
       ? 'line-through'
       : underline

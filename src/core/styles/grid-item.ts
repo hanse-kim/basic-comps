@@ -14,5 +14,23 @@ export type GridItemProps = {
 };
 
 export const gridItemStyles = (props: GridItemProps) => {
-  return css(props);
+  const {
+    gridArea,
+    gridRow,
+    gridRowStart,
+    gridRowEnd,
+    gridColumn,
+    gridColumnStart,
+    gridColumnEnd,
+  } = props;
+
+  return css({
+    gridArea,
+    gridRow,
+    gridRowStart,
+    gridRowEnd,
+    gridColumn,
+    gridColumnStart,
+    gridColumnEnd,
+  });
 };

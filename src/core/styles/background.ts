@@ -17,10 +17,29 @@ export type BackgroundProps = {
 };
 
 export const backgroundStyles = (props: BackgroundProps) => {
-  const { backgroundColor, backgroundSize } = props;
+  const {
+    background,
+    backgroundColor,
+    backgroundClip,
+    backgroundImage,
+    backgroundOrigin,
+    backgroundRepeat,
+    backgroundSize,
+    backgroundPosition,
+    backgroundPositionX,
+    backgroundPositionY,
+  } = props;
+
   return css({
-    ...props,
+    background,
     backgroundColor: parseColor(backgroundColor),
+    backgroundClip,
+    backgroundImage,
+    backgroundOrigin,
+    backgroundRepeat,
     backgroundSize: parseSize(backgroundSize),
+    backgroundPosition,
+    backgroundPositionX,
+    backgroundPositionY,
   });
 };

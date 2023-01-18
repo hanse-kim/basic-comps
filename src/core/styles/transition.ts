@@ -10,5 +10,19 @@ export type TransitionProps = {
 };
 
 export const transitionStyles = (props: TransitionProps) => {
-  return css(props);
+  const {
+    transition,
+    transitionDelay,
+    transitionDuration,
+    transitionProperty,
+    transitionTimingFunction,
+  } = props;
+
+  return css({
+    transition,
+    transitionDelay,
+    transitionDuration,
+    transitionProperty,
+    transitionTimingFunction,
+  });
 };

@@ -13,5 +13,25 @@ export type AnimationProps = {
 };
 
 export const animationStyles = (props: AnimationProps) => {
-  return css(props);
+  const {
+    animation,
+    animationDuration,
+    animationDelay,
+    animationName,
+    animationFillMode,
+    animationIterationCount,
+    animationPlayState,
+    animationTimingFunction,
+  } = props;
+
+  return css({
+    animation,
+    animationDuration,
+    animationDelay,
+    animationName,
+    animationFillMode,
+    animationIterationCount,
+    animationPlayState,
+    animationTimingFunction,
+  });
 };

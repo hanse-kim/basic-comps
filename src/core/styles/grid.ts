@@ -19,10 +19,27 @@ export type GridProps = {
 };
 
 export const gridStyles = (props: GridProps) => {
-  const { gridGap, gridColumnGap, gridRowGap } = props;
+  const {
+    gridTemplate,
+    gridTemplateAreas,
+    girdTemplateColumns,
+    gridTemplateRows,
+    girdAutoColumns,
+    gridAutoRows,
+    gridAutoFlow,
+    gridGap,
+    gridColumnGap,
+    gridRowGap,
+  } = props;
 
   return css({
-    ...props,
+    gridTemplate,
+    gridTemplateAreas,
+    girdTemplateColumns,
+    gridTemplateRows,
+    girdAutoColumns,
+    gridAutoRows,
+    gridAutoFlow,
     gridGap: parseSize(gridGap),
     gridColumnGap: parseSize(gridColumnGap),
     gridRowGap: parseSize(gridRowGap),

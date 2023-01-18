@@ -7,6 +7,8 @@ export type LayoutProps = {
   display?: CSSProperties['display'];
 
   size?: Size;
+  minSize?: Size;
+  maxSize?: Size;
 
   width?: Size;
   minWidth?: Size;
@@ -24,12 +26,13 @@ export type LayoutProps = {
 export const layoutStyles = (props: LayoutProps) => () => {
   const width = props.size || props.width;
   const height = props.size || props.height;
+  const minWidth = props.minSize || props.minWidth;
+  const maxWidth = props.maxSize || props.maxWidth;
+  const minHeight = props.minSize || props.minHeight;
+  const maxHeight = props.maxSize || props.maxHeight;
+
   const {
     display,
-    minWidth,
-    maxWidth,
-    minHeight,
-    maxHeight,
     overflow,
     overflowX,
     overflowY,
