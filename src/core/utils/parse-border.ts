@@ -3,7 +3,7 @@ import { parseColor } from './parse-color';
 import { parseSize } from './parse-size';
 
 export function parseBorder(border?: Border | false) {
-  if (typeof border === 'undefined' || border === false) {
+  if (border === undefined || border === false) {
     return undefined;
   }
 
