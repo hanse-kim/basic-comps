@@ -3,6 +3,7 @@ import { CSSProperties } from 'react';
 
 export type EffectProps = {
   filter?: CSSProperties['filter'];
+  backdropFilter?: CSSProperties['backdropFilter'];
   boxShadow?: CSSProperties['boxShadow'];
   opacity?: CSSProperties['opacity'];
   mixBlendMode?: CSSProperties['mixBlendMode'];
@@ -10,11 +11,18 @@ export type EffectProps = {
 };
 
 export const effectStyles = (props: EffectProps) => {
-  const { filter, boxShadow, opacity, mixBlendMode, backgroundBlendMode } =
-    props;
+  const {
+    filter,
+    backdropFilter,
+    boxShadow,
+    opacity,
+    mixBlendMode,
+    backgroundBlendMode,
+  } = props;
 
   return css({
     filter,
+    backdropFilter,
     boxShadow,
     opacity,
     mixBlendMode,
