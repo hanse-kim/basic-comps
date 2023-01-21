@@ -1,4 +1,4 @@
-export { Absolute } from './absolute';
-export { Box } from './box';
-export { Fixed } from './fixed';
-export { Sticky } from './sticky';
+export * from './absolute';
+export * from './box';
+export * from './fixed';
+export * from './sticky';
