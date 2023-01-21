@@ -25,18 +25,16 @@ export type BoxProps = BackgroundProps &
   ParagraphProps &
   SpaceProps;
 
-export const Box = styled.div<BoxProps>`
-  ${(props) => [
-    defaultBoxStyles,
-    backgroundStyles(props),
-    borderStyles(props),
-    effectStyles(props),
-    flexboxStyles(props),
-    layoutStyles(props),
-    paragraphStyles(props),
-    spaceStyles(props),
-  ]}
-`;
+export const Box = styled.div<BoxProps>((props) => [
+  defaultBoxStyles,
+  backgroundStyles(props),
+  borderStyles(props),
+  effectStyles(props),
+  flexboxStyles(props),
+  layoutStyles(props),
+  paragraphStyles(props),
+  spaceStyles(props),
+]);
 
 const defaultBoxStyles = css({
   display: 'flex',
