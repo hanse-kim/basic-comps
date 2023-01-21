@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 
 export type EffectProps = {
@@ -20,12 +19,12 @@ export const effectStyles = (props: EffectProps) => {
     backgroundBlendMode,
   } = props;
 
-  return css({
+  return {
     filter,
     backdropFilter,
     boxShadow,
     opacity,
     mixBlendMode,
     backgroundBlendMode,
-  });
+  };
 };

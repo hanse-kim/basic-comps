@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
@@ -31,14 +30,9 @@ export const layoutStyles = (props: LayoutProps) => () => {
   const minHeight = props.minSize || props.minHeight;
   const maxHeight = props.maxSize || props.maxHeight;
 
-  const {
-    display,
-    overflow,
-    overflowX,
-    overflowY,
-  } = props;
+  const { display, overflow, overflowX, overflowY } = props;
 
-  return css({
+  return {
     display,
     width: parseSize(width),
     height: parseSize(height),
@@ -49,5 +43,5 @@ export const layoutStyles = (props: LayoutProps) => () => {
     overflow,
     overflowX,
     overflowY,
-  });
+  };
 };

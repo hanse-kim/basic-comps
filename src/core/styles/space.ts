@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Size, Space } from '../types';
 import { getDefined, parseSpace } from '../utils';
 
@@ -53,7 +52,7 @@ export const spaceStyles = (props: SpaceProps) => {
     padding.bottom
   );
 
-  return css({
+  return {
     marginLeft,
     marginRight,
     marginTop,
@@ -62,5 +61,5 @@ export const spaceStyles = (props: SpaceProps) => {
     paddingRight,
     paddingTop,
     paddingBottom,
-  });
+  };
 };

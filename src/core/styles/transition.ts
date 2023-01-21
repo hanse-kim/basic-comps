@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 
 export type TransitionProps = {
@@ -18,11 +17,11 @@ export const transitionStyles = (props: TransitionProps) => {
     transitionTimingFunction,
   } = props;
 
-  return css({
+  return {
     transition,
     transitionDelay,
     transitionDuration,
     transitionProperty,
     transitionTimingFunction,
-  });
+  };
 };

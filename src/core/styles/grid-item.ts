@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 
 export type GridItemProps = {
@@ -24,7 +23,7 @@ export const gridItemStyles = (props: GridItemProps) => {
     gridColumnEnd,
   } = props;
 
-  return css({
+  return {
     gridArea,
     gridRow,
     gridRowStart,
@@ -32,5 +31,5 @@ export const gridItemStyles = (props: GridItemProps) => {
     gridColumn,
     gridColumnStart,
     gridColumnEnd,
-  });
+  };
 };

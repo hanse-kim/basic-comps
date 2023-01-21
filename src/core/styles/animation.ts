@@ -1,4 +1,4 @@
-import { css, Keyframes } from '@emotion/react';
+import { Keyframes } from '@emotion/react';
 import { CSSProperties } from 'react';
 
 export type AnimationProps = {
@@ -24,7 +24,7 @@ export const animationStyles = (props: AnimationProps) => {
     animationTimingFunction,
   } = props;
 
-  return css({
+  return {
     animation,
     animationDuration,
     animationDelay,
@@ -33,5 +33,5 @@ export const animationStyles = (props: AnimationProps) => {
     animationIterationCount,
     animationPlayState,
     animationTimingFunction,
-  });
+  };
 };

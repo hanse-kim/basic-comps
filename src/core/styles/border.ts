@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Border, Size } from '../types';
 import { parseSize } from '../utils';
 import { parseBorder } from '../utils/parse-border';
@@ -22,12 +21,12 @@ export const borderStyles = (props: BorderProps) => {
     borderRadius,
   } = props;
 
-  return css({
+  return {
     border: parseBorder(border),
     borderTop: parseBorder(borderTop),
     borderRight: parseBorder(borderRight),
     borderBottom: parseBorder(borderBottom),
     borderLeft: parseBorder(borderLeft),
     borderRadius: parseSize(borderRadius),
-  });
+  };
 };

@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size, ZIndex } from '../types';
 import { getDefined, parseSize, parseZIndex } from '../utils';
@@ -23,12 +22,12 @@ export const positionStyles = (props: PositionProps) => {
   const top = getDefined(props.top, insetY, inset);
   const bottom = getDefined(props.bottom, insetY, inset);
 
-  return css({
+  return {
     position,
     zIndex: parseZIndex(zIndex),
     left: parseSize(left),
     right: parseSize(right),
     top: parseSize(top),
     bottom: parseSize(bottom),
-  });
+  };
 };

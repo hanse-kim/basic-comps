@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseColor, parseSize } from '../utils';
@@ -30,7 +29,7 @@ export const backgroundStyles = (props: BackgroundProps) => {
     backgroundPositionY,
   } = props;
 
-  return css({
+  return {
     background,
     backgroundColor: parseColor(backgroundColor),
     backgroundClip,
@@ -41,5 +40,5 @@ export const backgroundStyles = (props: BackgroundProps) => {
     backgroundPosition,
     backgroundPositionX,
     backgroundPositionY,
-  });
+  };
 };

@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
@@ -32,7 +31,7 @@ export const gridStyles = (props: GridProps) => {
     gridRowGap,
   } = props;
 
-  return css({
+  return {
     gridTemplate,
     gridTemplateAreas,
     girdTemplateColumns,
@@ -43,5 +42,5 @@ export const gridStyles = (props: GridProps) => {
     gridGap: parseSize(gridGap),
     gridColumnGap: parseSize(gridColumnGap),
     gridRowGap: parseSize(gridRowGap),
-  });
+  };
 };

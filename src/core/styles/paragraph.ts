@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { CSSObject } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { FontWeight, Size } from '../types';
 import { parseColor, parseFontWeight, parseSize } from '../utils';
@@ -39,7 +39,7 @@ export const paragraphStyles = (props: ParagraphProps) => {
     lines,
   } = props;
 
-  return css({
+  return {
     color: parseColor(fontColor || color),
     fontSize: parseSize(fontSize),
     fontWeight: parseFontWeight(fontWeight),
@@ -56,15 +56,13 @@ export const paragraphStyles = (props: ParagraphProps) => {
       ? 'underline'
       : undefined,
     ...(lines && linesStyles(lines)),
-  });
+  };
 };
 
-const linesStyles = (lines: number) => {
-  return css`
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: ${lines};
-  `;
-};
+const linesStyles = (lines: number): CSSObject => ({
+  WebkitLineClamp: lines,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  display: '-webkit-box',
+  WebkitBoxOrient: 'vertical',
+});

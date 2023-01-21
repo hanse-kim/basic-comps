@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
@@ -40,7 +39,7 @@ export const flexboxStyles = (props: FlexboxProps) => {
     columnGap,
   } = props;
 
-  return css({
+  return {
     order,
     justifyContent,
     alignItems,
@@ -54,5 +53,5 @@ export const flexboxStyles = (props: FlexboxProps) => {
     gap: parseSize(gap),
     rowGap: parseSize(rowGap),
     columnGap: parseSize(columnGap),
-  });
+  };
 };
