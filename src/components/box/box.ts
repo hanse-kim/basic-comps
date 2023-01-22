@@ -19,6 +19,7 @@ import {
 
 type BoxOptions = {
   relative?: boolean;
+  centering?: boolean;
 };
 
 export type BoxProps = BoxOptions &
@@ -46,6 +47,10 @@ const defaultBoxStyles = (options: BoxOptions): CSSObject => ({
   flexDirection: 'column',
   alignItems: 'stretch',
   position: options.relative ? 'relative' : undefined,
+  ...(options.centering && {
+    justifyContent: 'center',
+    alignItems: 'center',
+  }),
 });
 
 export const Box = styled.div(createBoxComponent);
