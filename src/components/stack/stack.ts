@@ -5,6 +5,7 @@ import { BoxProps, createBoxComponent } from '../box';
 
 type StackOptions = {
   spacing?: Size;
+  reverse?: boolean;
 };
 
 export type StackProps = StackOptions & BoxProps;
@@ -15,7 +16,7 @@ const createHStackComponent = (props: StackProps) => [
 ];
 
 const defaultHStackStyles = (options: StackOptions): CSSObject => ({
-  flexDirection: 'row',
+  flexDirection: options.reverse ? 'row-reverse' : 'row',
   alignItems: 'center',
   columnGap: options.spacing,
 });
@@ -26,7 +27,7 @@ const createVStackComponent = (props: StackProps) => [
 ];
 
 const defaultVStackStyles = (options: StackOptions): CSSObject => ({
-  flexDirection: 'column',
+  flexDirection: options.reverse ? 'column-reverse' : 'column',
   alignItems: 'stretch',
   rowGap: options.spacing,
 });
