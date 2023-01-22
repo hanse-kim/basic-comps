@@ -31,7 +31,7 @@ export type BoxProps = BoxOptions &
   ParagraphStyleProps &
   SpaceStyleProps;
 
-export const createBoxComponent = (props: BoxProps) => [
+export const createBoxComponent = (props: BoxProps): CSSObject[] => [
   defaultBoxStyles(props),
   backgroundStyles(props),
   borderStyles(props),

@@ -22,7 +22,7 @@ export type LayoutStyleProps = {
   overflowY?: CSSProperties['overflowY'];
 };
 
-export const layoutStyles = (props: LayoutStyleProps) => () => {
+export const layoutStyles = (props: LayoutStyleProps) => {
   const width = props.size || props.width;
   const height = props.size || props.height;
   const minWidth = props.minSize || props.minWidth;
