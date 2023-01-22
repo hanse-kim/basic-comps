@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Size, ZIndex } from '../types';
 import { getDefined, parseSize, parseZIndex } from '../utils';
 
-export type PositionProps = {
+export type PositionStyleProps = {
   position?: CSSProperties['position'];
   inset?: Size;
   insetX?: Size;
@@ -14,7 +14,7 @@ export type PositionProps = {
   zIndex?: ZIndex;
 };
 
-export const positionStyles = (props: PositionProps) => {
+export const positionStyles = (props: PositionStyleProps) => {
   const { position, inset, insetX, insetY, zIndex } = props;
 
   const left = getDefined(props.left, insetX, inset);

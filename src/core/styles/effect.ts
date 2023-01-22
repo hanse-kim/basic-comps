@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 
-export type EffectProps = {
+export type EffectStyleProps = {
   filter?: CSSProperties['filter'];
   backdropFilter?: CSSProperties['backdropFilter'];
   boxShadow?: CSSProperties['boxShadow'];
@@ -9,7 +9,7 @@ export type EffectProps = {
   backgroundBlendMode?: CSSProperties['backgroundBlendMode'];
 };
 
-export const effectStyles = (props: EffectProps) => {
+export const effectStyles = (props: EffectStyleProps) => {
   const {
     filter,
     backdropFilter,

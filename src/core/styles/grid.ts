@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
 
-export type GridProps = {
+export type GridStyleProps = {
   gridTemplate?: CSSProperties['gridTemplate'];
   gridTemplateAreas?: CSSProperties['gridTemplateAreas'];
   girdTemplateColumns?: CSSProperties['gridTemplateColumns'];
@@ -17,7 +17,7 @@ export type GridProps = {
   gridRowGap?: Size;
 };
 
-export const gridStyles = (props: GridProps) => {
+export const gridStyles = (props: GridStyleProps) => {
   const {
     gridTemplate,
     gridTemplateAreas,

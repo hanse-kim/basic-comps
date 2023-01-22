@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
 
-export type LayoutProps = {
+export type LayoutStyleProps = {
   display?: CSSProperties['display'];
 
   size?: Size;
@@ -22,7 +22,7 @@ export type LayoutProps = {
   overflowY?: CSSProperties['overflowY'];
 };
 
-export const layoutStyles = (props: LayoutProps) => () => {
+export const layoutStyles = (props: LayoutStyleProps) => () => {
   const width = props.size || props.width;
   const height = props.size || props.height;
   const minWidth = props.minSize || props.minWidth;

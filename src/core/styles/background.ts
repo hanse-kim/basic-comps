@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseColor, parseSize } from '../utils';
 
-export type BackgroundProps = {
+export type BackgroundStyleProps = {
   background?: CSSProperties['background'];
   backgroundColor?: CSSProperties['backgroundColor'];
   backgroundClip?: CSSProperties['backgroundClip'];
@@ -15,7 +15,7 @@ export type BackgroundProps = {
   backgroundPositionY?: CSSProperties['backgroundPositionY'];
 };
 
-export const backgroundStyles = (props: BackgroundProps) => {
+export const backgroundStyles = (props: BackgroundStyleProps) => {
   const {
     background,
     backgroundColor,

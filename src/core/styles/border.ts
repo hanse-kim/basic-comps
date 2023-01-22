@@ -2,7 +2,7 @@ import { Border, Size } from '../types';
 import { parseSize } from '../utils';
 import { parseBorder } from '../utils/parse-border';
 
-export type BorderProps = {
+export type BorderStyleProps = {
   border?: Border;
   borderTop?: Border;
   borderRight?: Border;
@@ -11,7 +11,7 @@ export type BorderProps = {
   borderRadius?: Size;
 };
 
-export const borderStyles = (props: BorderProps) => {
+export const borderStyles = (props: BorderStyleProps) => {
   const {
     border,
     borderTop,

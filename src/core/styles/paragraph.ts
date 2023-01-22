@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 import { FontWeight, Size } from '../types';
 import { parseColor, parseFontWeight, parseSize } from '../utils';
 
-export type ParagraphProps = {
+export type ParagraphStyleProps = {
   color?: CSSProperties['color'];
   fontColor?: CSSProperties['color'];
   fontSize?: Size;
@@ -21,7 +21,7 @@ export type ParagraphProps = {
   lines?: number;
 };
 
-export const paragraphStyles = (props: ParagraphProps) => {
+export const paragraphStyles = (props: ParagraphStyleProps) => {
   const {
     color,
     fontColor,

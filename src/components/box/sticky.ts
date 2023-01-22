@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PositionProps, positionStyles } from 'src/core/styles';
+import { PositionStyleProps, positionStyles } from 'src/core/styles';
 import { BoxProps, createBoxComponent } from './box';
 
-export type StickyProps = BoxProps & PositionProps;
+export type StickyProps = BoxProps & PositionStyleProps;
 
 const createStickyComponent = (props: StickyProps) => [
   defaultStickyStyles,

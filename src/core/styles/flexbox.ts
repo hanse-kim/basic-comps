@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Size } from '../types';
 import { parseSize } from '../utils';
 
-export type FlexboxProps = {
+export type FlexboxStyleProps = {
   order?: CSSProperties['order'];
 
   justifyContent?: CSSProperties['justifyContent'];
@@ -22,7 +22,7 @@ export type FlexboxProps = {
   columnGap?: Size;
 };
 
-export const flexboxStyles = (props: FlexboxProps) => {
+export const flexboxStyles = (props: FlexboxStyleProps) => {
   const {
     order,
     justifyContent,

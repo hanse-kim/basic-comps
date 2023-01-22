@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PositionProps, positionStyles } from 'src/core/styles';
+import { PositionStyleProps, positionStyles } from 'src/core/styles';
 import { BoxProps, createBoxComponent } from './box';
 
-export type FixedProps = BoxProps & PositionProps;
+export type FixedProps = BoxProps & PositionStyleProps;
 
 const createFixedComponent = (props: FixedProps) => [
   defaultFixedStyles,

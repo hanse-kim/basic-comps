@@ -1,19 +1,19 @@
 import { CSSObject } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
-  BackgroundProps,
+  BackgroundStyleProps,
   backgroundStyles,
-  BorderProps,
+  BorderStyleProps,
   borderStyles,
-  EffectProps,
+  EffectStyleProps,
   effectStyles,
-  FlexboxProps,
+  FlexboxStyleProps,
   flexboxStyles,
-  LayoutProps,
+  LayoutStyleProps,
   layoutStyles,
-  ParagraphProps,
+  ParagraphStyleProps,
   paragraphStyles,
-  SpaceProps,
+  SpaceStyleProps,
   spaceStyles,
 } from 'src/core/styles';
 
@@ -23,13 +23,13 @@ type BoxOptions = {
 };
 
 export type BoxProps = BoxOptions &
-  BackgroundProps &
-  BorderProps &
-  EffectProps &
-  FlexboxProps &
-  LayoutProps &
-  ParagraphProps &
-  SpaceProps;
+  BackgroundStyleProps &
+  BorderStyleProps &
+  EffectStyleProps &
+  FlexboxStyleProps &
+  LayoutStyleProps &
+  ParagraphStyleProps &
+  SpaceStyleProps;
 
 export const createBoxComponent = (props: BoxProps) => [
   defaultBoxStyles(props),

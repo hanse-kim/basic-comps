@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 
-export type TransitionProps = {
+export type TransitionStyleProps = {
   transition?: CSSProperties['transition'];
   transitionDelay?: CSSProperties['transitionDelay'];
   transitionDuration?: CSSProperties['transitionDuration'];
@@ -8,7 +8,7 @@ export type TransitionProps = {
   transitionTimingFunction?: CSSProperties['transitionTimingFunction'];
 };
 
-export const transitionStyles = (props: TransitionProps) => {
+export const transitionStyles = (props: TransitionStyleProps) => {
   const {
     transition,
     transitionDelay,
