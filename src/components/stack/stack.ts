@@ -11,8 +11,8 @@ type StackOptions = {
 export type StackProps = StackOptions & BoxProps;
 
 const createHStackComponent = (props: StackProps) => [
-  defaultHStackStyles(props),
   ...createBoxComponent(props),
+  defaultHStackStyles(props),
 ];
 
 const defaultHStackStyles = (options: StackOptions): CSSObject => ({
@@ -22,8 +22,8 @@ const defaultHStackStyles = (options: StackOptions): CSSObject => ({
 });
 
 const createVStackComponent = (props: StackProps) => [
-  defaultVStackStyles(props),
   ...createBoxComponent(props),
+  defaultVStackStyles(props),
 ];
 
 const defaultVStackStyles = (options: StackOptions): CSSObject => ({

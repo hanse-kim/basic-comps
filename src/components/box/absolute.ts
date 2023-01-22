@@ -6,8 +6,8 @@ import { BoxProps, createBoxComponent } from './box';
 export type AbsoluteProps = BoxProps & PositionStyleProps;
 
 const createAbsoluteComponent = (props: AbsoluteProps) => [
-  defaultAbsoluteStyles,
   ...createBoxComponent(props),
+  defaultAbsoluteStyles,
   positionStyles(props),
 ];
 

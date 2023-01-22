@@ -6,8 +6,8 @@ import { BoxProps, createBoxComponent } from './box';
 export type FixedProps = BoxProps & PositionStyleProps;
 
 const createFixedComponent = (props: FixedProps) => [
-  defaultFixedStyles,
   ...createBoxComponent(props),
+  defaultFixedStyles,
   positionStyles(props),
 ];
 

@@ -6,8 +6,8 @@ import { BoxProps, createBoxComponent } from './box';
 export type StickyProps = BoxProps & PositionStyleProps;
 
 const createStickyComponent = (props: StickyProps) => [
-  defaultStickyStyles,
   ...createBoxComponent(props),
+  defaultStickyStyles,
   positionStyles(props),
 ];
 

@@ -5,8 +5,8 @@ import { BoxProps, createBoxComponent } from '../box';
 export type GridProps = BoxProps & GridStyleProps;
 
 const createGridComponent = (props: GridProps) => [
-  defaultGridStyles,
   ...createBoxComponent(props),
+  defaultGridStyles,
   gridStyles(props),
 ];
 
