@@ -15,10 +15,6 @@ export type ParagraphStyleProps = {
   wordSpacing?: CSSProperties['wordSpacing'];
   lineHeight?: CSSProperties['lineHeight'];
   textShadow?: CSSProperties['textShadow'];
-
-  lineThrough?: boolean;
-  underline?: boolean;
-  lines?: number;
 };
 
 export const paragraphStyles = (props: ParagraphStyleProps) => {
@@ -34,9 +30,6 @@ export const paragraphStyles = (props: ParagraphStyleProps) => {
     wordSpacing,
     lineHeight,
     textShadow,
-    lineThrough,
-    underline,
-    lines,
   } = props;
 
   return {
@@ -50,19 +43,5 @@ export const paragraphStyles = (props: ParagraphStyleProps) => {
     wordSpacing,
     lineHeight,
     textShadow,
-    textDecoration: lineThrough
-      ? 'line-through'
-      : underline
-      ? 'underline'
-      : undefined,
-    ...(lines && linesStyles(lines)),
   };
 };
-
-const linesStyles = (lines: number): CSSObject => ({
-  WebkitLineClamp: lines,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  display: '-webkit-box',
-  WebkitBoxOrient: 'vertical',
-});
