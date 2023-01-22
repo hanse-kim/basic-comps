@@ -26,8 +26,8 @@ const createVStackComponent = (props: StackProps) => [
 ];
 
 const defaultVStackStyles = (options: StackOptions): CSSObject => ({
-  width: '100%',
-  alignItems: 'center',
+  flexDirection: 'column',
+  alignItems: 'stretch',
   rowGap: options.spacing,
 });
 
