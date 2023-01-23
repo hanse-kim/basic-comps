@@ -16,6 +16,10 @@ import {
   SpaceStyleProps,
   spaceStyles,
 } from 'src/core/styles';
+import {
+  TransformStyleProps,
+  transformStyles,
+} from 'src/core/styles/transform';
 
 type BoxOptions = {
   relative?: boolean;
@@ -29,7 +33,8 @@ export type BoxProps = BoxOptions &
   FlexboxStyleProps &
   LayoutStyleProps &
   ParagraphStyleProps &
-  SpaceStyleProps;
+  SpaceStyleProps &
+  TransformStyleProps;
 
 export const createBoxComponent = (props: BoxProps): CSSObject[] => [
   defaultBoxStyles(props),
@@ -40,6 +45,7 @@ export const createBoxComponent = (props: BoxProps): CSSObject[] => [
   layoutStyles(props),
   paragraphStyles(props),
   spaceStyles(props),
+  transformStyles(props),
 ];
 
 const defaultBoxStyles = (options: BoxOptions): CSSObject => ({
