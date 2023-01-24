@@ -10,27 +10,27 @@ type StackOptions = {
 
 export type StackProps = StackOptions & BoxProps;
 
-const createHStackComponent = (props: StackProps) => [
+const createHorizontalStackComponent = (props: StackProps) => [
   ...createBoxComponent(props),
-  defaultHStackStyles(props),
+  defaultHorizontalStackStyles(props),
 ];
 
-const defaultHStackStyles = (options: StackOptions): CSSObject => ({
+const defaultHorizontalStackStyles = (options: StackOptions): CSSObject => ({
   flexDirection: options.reverse ? 'row-reverse' : 'row',
   alignItems: 'center',
   columnGap: options.spacing,
 });
 
-const createVStackComponent = (props: StackProps) => [
+const createVerticalStackComponent = (props: StackProps) => [
   ...createBoxComponent(props),
-  defaultVStackStyles(props),
+  defaultVerticalStackStyles(props),
 ];
 
-const defaultVStackStyles = (options: StackOptions): CSSObject => ({
+const defaultVerticalStackStyles = (options: StackOptions): CSSObject => ({
   flexDirection: options.reverse ? 'column-reverse' : 'column',
   alignItems: 'stretch',
   rowGap: options.spacing,
 });
 
-export const HStack = styled.div(createHStackComponent);
-export const VStack = styled.div(createVStackComponent);
+export const HStack = styled.div(createHorizontalStackComponent);
+export const VStack = styled.div(createVerticalStackComponent);
