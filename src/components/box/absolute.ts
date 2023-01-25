@@ -1,11 +1,10 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PositionStyleProps, positionStyles } from 'src/core/styles';
-import { BoxProps, createBoxComponent } from './box';
+import { positionStyles } from 'src/core/styles';
+import { createBoxComponent } from './box';
+import { PositionedBoxProps } from './_types';
 
-export type AbsoluteProps = BoxProps & PositionStyleProps;
-
-const createAbsoluteComponent = (props: AbsoluteProps) => [
+const createAbsoluteComponent = (props: PositionedBoxProps) => [
   ...createBoxComponent(props),
   defaultAbsoluteStyles,
   positionStyles(props),
