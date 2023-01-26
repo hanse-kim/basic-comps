@@ -1,19 +1,7 @@
 import { CSSObject } from '@emotion/react';
 import styled from '@emotion/styled';
-import { CSSProperties } from 'react';
-import { FlexboxStyleProps, LayoutStyleProps } from 'src/core/styles';
-import { Size } from 'src/core/types';
 import { parseColor, parseSize } from 'src/core/utils';
-
-type DividerOptions = {
-  thickness?: Size;
-  length?: Size;
-  color?: CSSProperties['backgroundColor'];
-};
-
-export type DividerProps = DividerOptions &
-  LayoutStyleProps &
-  FlexboxStyleProps;
+import { DividerOptions, DividerProps } from './_types';
 
 const createHorizontalDividerComponent = (props: DividerProps) => [
   defaultDividerStyles,
