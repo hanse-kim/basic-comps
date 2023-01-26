@@ -1,14 +1,7 @@
 import { CSSObject } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Size } from 'src/core/types';
-import { BoxProps, createBoxComponent } from '../box';
-
-type StackOptions = {
-  spacing?: Size;
-  reverse?: boolean;
-};
-
-export type StackProps = StackOptions & BoxProps;
+import { createBoxComponent } from '../box';
+import { StackOptions, StackProps } from './_types';
 
 const createHorizontalStackComponent = (props: StackProps) => [
   ...createBoxComponent(props),
