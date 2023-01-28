@@ -1,13 +1,6 @@
 import styled, { CSSObject } from '@emotion/styled';
-import { BoxProps, createBoxComponent } from '../box';
-
-type TextOptions = {
-  lineThrough?: boolean;
-  underline?: boolean;
-  lines?: number;
-};
-
-export type TextProps = TextOptions & BoxProps;
+import { createBoxComponent } from '../box';
+import { TextOptions, TextProps } from './_types';
 
 const createTextComponent = (props: TextProps) => [
   ...createBoxComponent(props),
