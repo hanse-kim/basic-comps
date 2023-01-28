@@ -1,8 +1,7 @@
 import styled, { CSSObject } from '@emotion/styled';
-import { GridStyleProps, gridStyles } from 'src/core/styles';
-import { BoxProps, createBoxComponent } from '../box';
-
-export type GridProps = BoxProps & GridStyleProps;
+import { gridStyles } from 'src/core/styles';
+import { createBoxComponent } from '../box';
+import { GridProps } from './_types';
 
 const createGridComponent = (props: GridProps) => [
   ...createBoxComponent(props),
@@ -11,7 +10,7 @@ const createGridComponent = (props: GridProps) => [
 ];
 
 const defaultGridStyles: CSSObject = {
-  display: "grid"
-}
+  display: 'grid',
+};
 
 export const Grid = styled.div(createGridComponent);

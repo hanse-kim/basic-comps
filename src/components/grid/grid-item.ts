@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { GridItemStyleProps, gridItemStyles } from 'src/core/styles';
-import { BoxProps, createBoxComponent } from '../box';
-
-export type GridItemProps = BoxProps & GridItemStyleProps;
+import { gridItemStyles } from 'src/core/styles';
+import { createBoxComponent } from '../box';
+import { GridItemProps } from './_types';
 
 const createGridItemComponent = (props: GridItemProps) => [
   ...createBoxComponent(props),
