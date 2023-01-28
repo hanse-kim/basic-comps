@@ -2,7 +2,7 @@ import styled, { CSSObject } from '@emotion/styled';
 import { createBoxComponent } from '../box';
 import { TextOptions, TextProps } from './_types';
 
-const createTextComponent = (props: TextProps) => [
+const createTextComponent = (props: TextProps): CSSObject[] => [
   ...createBoxComponent(props),
   textStyles(props),
 ];

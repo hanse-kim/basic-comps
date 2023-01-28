@@ -4,7 +4,7 @@ import { parseColor, parseSize } from 'src/core/utils';
 import { commonDividerStyles } from './_common';
 import { DividerOptions, DividerProps } from './_types';
 
-const createVerticalDividerComponent = (props: DividerProps) => [
+const createVerticalDividerComponent = (props: DividerProps): CSSObject[] => [
   commonDividerStyles,
   verticalDividerStyles(props),
 ];

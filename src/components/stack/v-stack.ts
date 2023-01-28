@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { createBoxComponent } from '../box';
 import { StackOptions, StackProps } from './_types';
 
-const createVerticalStackComponent = (props: StackProps) => [
+const createVerticalStackComponent = (props: StackProps): CSSObject[] => [
   ...createBoxComponent(props),
   defaultVerticalStackStyles(props),
 ];

@@ -3,7 +3,7 @@ import { gridStyles } from 'src/core/styles';
 import { createBoxComponent } from '../box';
 import { GridProps } from './_types';
 
-const createGridComponent = (props: GridProps) => [
+const createGridComponent = (props: GridProps): CSSObject[] => [
   ...createBoxComponent(props),
   defaultGridStyles,
   gridStyles(props),

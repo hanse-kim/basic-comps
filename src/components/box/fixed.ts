@@ -1,17 +1,17 @@
-import { css } from '@emotion/react';
+import { CSSObject } from '@emotion/react';
 import styled from '@emotion/styled';
 import { positionStyles } from 'src/core/styles';
 import { createBoxComponent } from './box';
 import { PositionedBoxProps } from './_types';
 
-const createFixedComponent = (props: PositionedBoxProps) => [
+const createFixedComponent = (props: PositionedBoxProps): CSSObject[] => [
   ...createBoxComponent(props),
   defaultFixedStyles,
   positionStyles(props),
 ];
 
-const defaultFixedStyles = css({
+const defaultFixedStyles: CSSObject = {
   position: 'fixed',
-});
+};
 
 export const Fixed = styled.div(createFixedComponent);
