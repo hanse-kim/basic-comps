@@ -1,3 +1,4 @@
+export * as styled from '@emotion/styled';
 export { parseColor } from './parse-color';
 export { parseFontWeight } from './parse-font-weight';
 export { parseSize } from './parse-size';
