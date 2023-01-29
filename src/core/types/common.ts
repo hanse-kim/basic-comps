@@ -2,9 +2,11 @@ import {
   CSSObject as EmotionCSSObject,
   Keyframes as EmotionKeyframes,
 } from '@emotion/react';
+import { CSSProperties as ReactCSSProperties } from 'react';
 
 export type CSSObject = EmotionCSSObject;
 export type Keyframes = EmotionKeyframes;
+export type CSSProperties = ReactCSSProperties;
 
 export type UnionString<T> = T | (string & {});
 

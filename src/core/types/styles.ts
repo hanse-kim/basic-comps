@@ -1,6 +1,5 @@
-import { CSSProperties } from '@emotion/serialize';
 import { fontWeights, sizeAliasMap, zIndices } from '../constants';
-import { RecursiveObject, UnionString } from './common';
+import { CSSProperties, RecursiveObject, UnionString } from './common';
 
 export type SizeAlias = keyof typeof sizeAliasMap;
 export type Size = number | UnionString<SizeAlias>;
