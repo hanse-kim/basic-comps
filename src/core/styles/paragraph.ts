@@ -1,6 +1,4 @@
-import { CSSObject } from '@emotion/react';
-import { CSSProperties } from 'react';
-import { FontWeight, Size } from '../types';
+import { CSSProperties, FontWeight, Size } from '../types';
 import { parseColor, parseFontWeight, parseSize } from '../utils';
 
 export type ParagraphStyleProps = {

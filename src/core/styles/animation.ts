@@ -1,5 +1,4 @@
-import { Keyframes } from '@emotion/react';
-import { CSSProperties } from 'react';
+import { CSSProperties, Keyframes } from '../types';
 
 export type AnimationStyleProps = {
   animation?: CSSProperties['animation'];

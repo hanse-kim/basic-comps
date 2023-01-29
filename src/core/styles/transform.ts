@@ -1,6 +1,4 @@
-import { CSSObject } from '@emotion/react';
-import { CSSProperties } from 'react';
-import { Size } from '../types';
+import { CSSObject, CSSProperties, Size } from '../types';
 import { parseSize } from '../utils';
 
 export type TransformStyleProps = {

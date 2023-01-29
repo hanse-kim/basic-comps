@@ -1,5 +1,4 @@
-import { CSSProperties } from 'react';
-import { Size, ZIndex } from '../types';
+import { CSSProperties, Size, ZIndex } from '../types';
 import { getDefined, parseSize, parseZIndex } from '../utils';
 
 export type PositionStyleProps = {

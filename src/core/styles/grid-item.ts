@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties } from '../types';
 
 export type GridItemStyleProps = {
   gridArea?: CSSProperties['gridArea'];

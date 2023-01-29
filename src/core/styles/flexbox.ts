@@ -1,5 +1,4 @@
-import { CSSProperties } from 'react';
-import { Size } from '../types';
+import { CSSProperties, Size } from '../types';
 import { parseSize } from '../utils';
 
 export type FlexboxStyleProps = {
