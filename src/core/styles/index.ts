@@ -20,5 +20,7 @@ export { positionStyles } from './position';
 export type { PositionStyleProps } from './position';
 export { spaceStyles } from './space';
 export type { SpaceStyleProps } from './space';
+export { transformStyles } from './transform';
+export type { TransformStyleProps } from './transform';
 export { transitionStyles } from './transition';
 export type { TransitionStyleProps } from './transition';

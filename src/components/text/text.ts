@@ -1,4 +1,4 @@
-import styled, { CSSObject } from '@emotion/styled';
+import { CSSObject, styled } from 'src/core';
 import { createBoxComponent } from '../box';
 import { TextOptions, TextProps } from './_types';
 

@@ -1,6 +1,4 @@
-import { CSSObject } from '@emotion/react';
-import styled from '@emotion/styled';
-import { parseColor, parseSize } from 'src/core/utils';
+import { CSSObject, parseColor, parseSize, styled } from 'src/core';
 import { commonDividerStyles } from './_common';
 import { DividerOptions, DividerProps } from './_types';
 

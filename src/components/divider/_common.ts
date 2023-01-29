@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/react';
+import { CSSObject } from 'src/core';
 
 export const commonDividerStyles: CSSObject = {
   display: 'flex',

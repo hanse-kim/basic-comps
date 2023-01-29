@@ -1,6 +1,9 @@
-import { CSSProperties } from 'react';
-import { FlexboxStyleProps, LayoutStyleProps } from 'src/core/styles';
-import { Size } from 'src/core/types';
+import {
+  CSSProperties,
+  FlexboxStyleProps,
+  LayoutStyleProps,
+  Size,
+} from 'src/core';
 
 export type DividerOptions = {
   thickness?: Size;

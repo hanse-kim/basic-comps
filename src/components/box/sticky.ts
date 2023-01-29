@@ -1,6 +1,4 @@
-import { CSSObject } from '@emotion/react';
-import styled from '@emotion/styled';
-import { positionStyles } from 'src/core/styles';
+import { CSSObject, positionStyles, styled } from 'src/core';
 import { createBoxComponent } from './box';
 import { PositionedBoxProps } from './_types';
 

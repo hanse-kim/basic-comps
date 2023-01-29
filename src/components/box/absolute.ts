@@ -1,8 +1,7 @@
-import styled, { CSSObject } from '@emotion/styled';
-import { positionStyles } from 'src/core/styles';
+import { CSSObject, positionStyles, styled } from 'src/core';
 import { createBoxComponent } from './box';
-import { PositionedBoxProps } from './_types';
 
+import { PositionedBoxProps } from './_types';
 const createAbsoluteComponent = (props: PositionedBoxProps): CSSObject[] => [
   ...createBoxComponent(props),
   defaultAbsoluteStyles,

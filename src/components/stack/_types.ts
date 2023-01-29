@@ -1,4 +1,4 @@
-import { Size } from 'src/core/types';
+import { Size } from 'src/core';
 import { BoxProps } from '../box';
 
 export type StackOptions = {

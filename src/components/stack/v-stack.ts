@@ -1,5 +1,4 @@
-import { CSSObject } from '@emotion/react';
-import styled from '@emotion/styled';
+import { CSSObject, styled } from 'src/core';
 import { createBoxComponent } from '../box';
 import { StackOptions, StackProps } from './_types';
 

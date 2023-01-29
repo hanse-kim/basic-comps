@@ -1,15 +1,15 @@
-import { CSSObject } from '@emotion/react';
-import styled from '@emotion/styled';
 import {
   backgroundStyles,
   borderStyles,
+  CSSObject,
   effectStyles,
   flexboxStyles,
   layoutStyles,
   paragraphStyles,
   spaceStyles,
-} from 'src/core/styles';
-import { transformStyles } from 'src/core/styles/transform';
+  styled,
+  transformStyles,
+} from 'src/core';
 import { BoxOptions, BoxProps } from './_types';
 
 export const createBoxComponent = (props: BoxProps): CSSObject[] => [

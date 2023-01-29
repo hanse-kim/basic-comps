@@ -7,8 +7,8 @@ import {
   ParagraphStyleProps,
   PositionStyleProps,
   SpaceStyleProps,
-} from 'src/core/styles';
-import { TransformStyleProps } from 'src/core/styles/transform';
+  TransformStyleProps,
+} from 'src/core';
 
 export type BoxOptions = {
   relative?: boolean;

@@ -1,5 +1,4 @@
-import styled, { CSSObject } from '@emotion/styled';
-import { gridStyles } from 'src/core/styles';
+import { CSSObject, gridStyles, styled } from 'src/core';
 import { createBoxComponent } from '../box';
 import { GridProps } from './_types';
 
