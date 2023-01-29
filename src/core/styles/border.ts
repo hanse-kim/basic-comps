@@ -1,6 +1,5 @@
 import { Border, Size } from '../types';
-import { parseSize } from '../utils';
-import { parseBorder } from '../utils/parse-border';
+import { parseBorder, parseSize } from '../utils';
 
 export type BorderStyleProps = {
   border?: Border;
