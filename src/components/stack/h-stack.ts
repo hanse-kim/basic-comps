@@ -8,9 +8,10 @@ const createHorizontalStackComponent = (props: StackProps): CSSObject[] => [
 ];
 
 const defaultHorizontalStackStyles = (options: StackOptions): CSSObject => ({
-  flexDirection: options.reverse ? 'row-reverse' : 'row',
+  flexDirection: options.reversed ? 'row-reverse' : 'row',
   alignItems: 'center',
   columnGap: options.spacing,
+  rowGap: options.crossSpacing,
 });
 
 export const HStack = styled.div(createHorizontalStackComponent);

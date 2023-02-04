@@ -8,9 +8,10 @@ const createVerticalStackComponent = (props: StackProps): CSSObject[] => [
 ];
 
 const defaultVerticalStackStyles = (options: StackOptions): CSSObject => ({
-  flexDirection: options.reverse ? 'column-reverse' : 'column',
+  flexDirection: options.reversed ? 'column-reverse' : 'column',
   alignItems: 'stretch',
   rowGap: options.spacing,
+  columnGap: options.crossSpacing,
 });
 
 export const VStack = styled.div(createVerticalStackComponent);
