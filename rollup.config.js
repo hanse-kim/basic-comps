@@ -8,4 +8,5 @@ export default {
     format: 'es',
   },
   plugins: [typescript(), terser()],
+  external: [/react.+/, /@emotion.+/],
 };
