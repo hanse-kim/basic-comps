@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "declaration": true,
-    "declarationDir": "./dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
@@ -25,9 +23,9 @@
     "baseUrl": "."
   },
   "include": [
-    "./src"
+    "src"
   ],
   "exclude": [
-    "./src/stories"
+    "src/stories"
   ]
 }
