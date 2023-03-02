@@ -1,5 +1,6 @@
-import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+import copy from 'rollup-plugin-copy';
 
 export default {
   input: 'src/index.ts',
@@ -7,6 +8,10 @@ export default {
     dir: 'dist',
     format: 'es',
   },
-  plugins: [typescript(), terser()],
+  plugins: [
+    copy({ targets: [{ src: './package.json', dest: './dist' }] }),
+    typescript(),
+    terser(),
+  ],
   external: [/react.+/, /@emotion.+/],
 };
