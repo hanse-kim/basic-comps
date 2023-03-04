@@ -8,7 +8,7 @@ export default [
     input: 'src/components/index.ts',
     output: {
       dir: 'dist',
-      sourcemap: true,
+      format: 'esm',
     },
 
     plugins: [
@@ -24,7 +24,7 @@ export default [
     input: 'src/components/index.ts',
     output: {
       dir: 'dist',
-      format: 'es',
+      format: 'esm',
     },
     plugins: [
       dts({
