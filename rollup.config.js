@@ -1,38 +1,41 @@
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import copy from 'rollup-plugin-copy';
-import dts from 'rollup-plugin-dts';
+import fs from 'fs';
+import path from 'path';
 
-export default [
-  {
-    input: 'src/components/index.ts',
-    output: {
+const __dirname = path.resolve();
+
+const getFiles = (folderPath) => {
+  return fs.readdirSync(folderPath).flatMap((fileName) => {
+    const filePath = path.join(folderPath, fileName);
+    if (fs.statSync(filePath).isDirectory()) {
+      return getFiles(filePath);
+    } else {
+      return {
+        fileName: filePath
+          .replace(path.join(__dirname, 'src/'), '')
+          .replace('.ts', ''),
+        filePath,
+      };
+    }
+  });
+};
+
+const inputFiles = getFiles(path.join(__dirname, 'src'));
+console.log(inputFiles);
+
+export default {
+  input: Object.fromEntries(
+    inputFiles
+      .filter(({ filePath }) => filePath.endsWith('index.ts'))
+      .map(({ fileName, filePath }) => [fileName, filePath])
+  ),
+  output: [
+    {
       dir: 'dist',
       format: 'esm',
     },
-
-    plugins: [
-      copy({
-        targets: [{ src: './package.json', dest: './dist' }],
-      }),
-      typescript(),
-      terser(),
-    ],
-    external: [/react.+/, /@emotion.+/],
-  },
-  {
-    input: 'src/components/index.ts',
-    output: {
-      dir: 'dist',
-      format: 'esm',
-    },
-    plugins: [
-      dts({
-        compilerOptions: {
-          baseUrl: '.',
-        },
-      }),
-    ],
-    external: [/react.+/, /@emotion.+/],
-  },
-];
+  ],
+  plugins: [typescript(), terser()],
+  external: [/react.+/, /@emotion.+/],
+};
