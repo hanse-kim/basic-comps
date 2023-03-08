@@ -12,6 +12,8 @@ export { gridStyles } from './grid';
 export type { GridStyleProps } from './grid';
 export { gridItemStyles } from './grid-item';
 export type { GridItemStyleProps } from './grid-item';
+export { interactivityStyles } from './interactivity';
+export type { InteractivityStyleProps } from './interactivity';
 export { layoutStyles } from './layout';
 export type { LayoutStyleProps } from './layout';
 export { paragraphStyles } from './paragraph';
