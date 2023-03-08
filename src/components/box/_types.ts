@@ -3,6 +3,7 @@ import {
   BorderStyleProps,
   EffectStyleProps,
   FlexboxStyleProps,
+  InteractivityStyleProps,
   LayoutStyleProps,
   ParagraphStyleProps,
   PositionStyleProps,
@@ -23,6 +24,7 @@ export type BoxProps = BoxOptions &
   LayoutStyleProps &
   ParagraphStyleProps &
   SpaceStyleProps &
-  TransformStyleProps;
+  TransformStyleProps &
+  InteractivityStyleProps;
 
 export type PositionedBoxProps = BoxProps & PositionStyleProps;

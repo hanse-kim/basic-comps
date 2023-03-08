@@ -4,6 +4,7 @@ import {
   CSSObject,
   effectStyles,
   flexboxStyles,
+  interactivityStyles,
   layoutStyles,
   paragraphStyles,
   spaceStyles,
@@ -22,6 +23,7 @@ export const createBoxComponent = (props: BoxProps): CSSObject[] => [
   paragraphStyles(props),
   spaceStyles(props),
   transformStyles(props),
+  interactivityStyles(props),
 ];
 
 const defaultBoxStyles = (options: BoxOptions): CSSObject => ({
