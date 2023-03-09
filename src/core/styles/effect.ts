@@ -1,4 +1,5 @@
-import { CSSProperties } from '../types';
+import { Border, CSSProperties, Size } from '../types';
+import { parseBorder, parseColor, parseSize } from '../utils';
 
 export type EffectStyleProps = {
   filter?: CSSProperties['filter'];
@@ -7,6 +8,11 @@ export type EffectStyleProps = {
   opacity?: CSSProperties['opacity'];
   mixBlendMode?: CSSProperties['mixBlendMode'];
   backgroundBlendMode?: CSSProperties['backgroundBlendMode'];
+
+  outline?: Border;
+  outlineWidth?: Size;
+  outlineStyle?: CSSProperties['outlineStyle'];
+  outlineColor?: CSSProperties['outlineColor'];
 };
 
 export const effectStyles = (props: EffectStyleProps) => {
@@ -17,6 +23,10 @@ export const effectStyles = (props: EffectStyleProps) => {
     opacity,
     mixBlendMode,
     backgroundBlendMode,
+    outline,
+    outlineColor,
+    outlineStyle,
+    outlineWidth,
   } = props;
 
   return {
@@ -26,5 +36,9 @@ export const effectStyles = (props: EffectStyleProps) => {
     opacity,
     mixBlendMode,
     backgroundBlendMode,
+    outline: parseBorder(outline),
+    outlineWidth: parseSize(outlineWidth),
+    outlineStyle,
+    outlineColor: parseColor(outlineColor),
   };
 };

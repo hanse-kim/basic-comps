@@ -16,4 +16,7 @@ export type ZIndex = keyof typeof zIndices | number;
 
 export type Colors = RecursiveObject<string>;
 
-export type Border = string | [Size, CSSProperties['borderStyle'], string];
+export type Border =
+  | string
+  | [width: Size, style: CSSProperties['borderStyle'], color: string];
+
