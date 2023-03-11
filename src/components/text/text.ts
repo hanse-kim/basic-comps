@@ -4,8 +4,13 @@ import { TextOptions, TextProps } from './_types';
 
 const createTextComponent = (props: TextProps): CSSObject[] => [
   ...createBoxComponent(props),
+  defaultTextStyles,
   textStyles(props),
 ];
+
+const defaultTextStyles: CSSObject = {
+  margin: 0,
+};
 
 const textStyles = (options: TextOptions): CSSObject => ({
   textDecoration: options.lineThrough
