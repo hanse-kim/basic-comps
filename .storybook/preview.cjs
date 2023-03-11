@@ -6,4 +6,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    values: [
+      {
+        name: 'facebook',
+        value: '#f0f2f5',
+      },
+    ],
+  },
 };
