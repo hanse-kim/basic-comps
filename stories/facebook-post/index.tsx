@@ -18,8 +18,9 @@ export const FacebookPost = ({
 }: FacebookPostProps) => {
   return (
     <Box
+      width="100%"
       maxWidth={680}
-      backgroundColor="#fffff"
+      backgroundColor="#ffffff"
       borderRadius={8}
       boxShadow="0 1px 2px rgba(0, 0, 0, 0.2)"
     >

@@ -6,7 +6,7 @@ export default {
   component: FacebookPost,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'centered',
+    layout: 'padded',
     backgrounds: {
       default: 'facebook',
     },
@@ -18,4 +18,9 @@ const Template: ComponentStory<typeof FacebookPost> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  userName: 'Hans Kim',
+  profileImageUrl: 'https://avatars.githubusercontent.com/u/55024033?v=4',
+  createdAt: new Date(),
+  content: "Hello world!",
+};
