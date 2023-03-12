@@ -22,5 +22,5 @@ Default.args = {
   userName: 'Hans Kim',
   profileImageUrl: 'https://avatars.githubusercontent.com/u/55024033?v=4',
   createdAt: new Date(),
-  content: "Hello world!",
+  contentHtml: "Hello world!",
 };

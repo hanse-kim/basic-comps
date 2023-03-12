@@ -7,14 +7,14 @@ export type FacebookPostProps = {
   userName: string;
   profileImageUrl: string;
   createdAt: Date;
-  content: string;
+  contentHtml: string;
 };
 
 export const FacebookPost = ({
   userName,
   profileImageUrl,
   createdAt,
-  content,
+  contentHtml,
 }: FacebookPostProps) => {
   return (
     <Box
@@ -29,7 +29,7 @@ export const FacebookPost = ({
         profileImageUrl={profileImageUrl}
         createdAt={createdAt}
       />
-      <FacebookPostContent content={content} />
+      <FacebookPostContent contentHtml={contentHtml} />
       <FacebookPostFooter />
     </Box>
   );
