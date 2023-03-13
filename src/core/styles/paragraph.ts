@@ -6,6 +6,7 @@ export type ParagraphStyleProps = {
   fontColor?: CSSProperties['color'];
   fontSize?: Size;
   fontWeight?: FontWeight;
+  fontFamily?: CSSProperties['fontFamily'];
   letterSpacing?: CSSProperties['letterSpacing'];
   textAlign?: CSSProperties['textAlign'];
   whiteSpace?: CSSProperties['whiteSpace'];
@@ -21,6 +22,7 @@ export const paragraphStyles = (props: ParagraphStyleProps) => {
     fontColor,
     fontSize,
     fontWeight,
+    fontFamily,
     letterSpacing,
     textAlign,
     whiteSpace,
@@ -34,6 +36,7 @@ export const paragraphStyles = (props: ParagraphStyleProps) => {
     color: parseColor(fontColor || color),
     fontSize: parseSize(fontSize),
     fontWeight: parseFontWeight(fontWeight),
+    fontFamily,
     letterSpacing,
     textAlign,
     whiteSpace,
