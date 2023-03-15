@@ -1,5 +1,6 @@
 import { Box, HStack, Text, VStack } from 'src';
 import { FacebookPostProps } from '.';
+import { FackbookPostAvatar } from './_common/avatar';
 import { FacebookPostIcon } from './_common/icon';
 
 type FacebookPostHeaderProps = Pick<
@@ -15,18 +16,10 @@ export const FacebookPostHeader = ({
   return (
     <Box padding={[12, 16]}>
       <HStack spacing={8}>
-        <Box
-          size={40}
-          borderRadius="full"
-          outline={[1, 'solid', 'rgba(0, 0, 0, 0.1)']}
-          overflow="hidden"
-        >
-          <img
-            src={profileImageUrl}
-            alt={`${userName}-profile`}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        </Box>
+        <FackbookPostAvatar
+          profileImageUrl={profileImageUrl}
+          userName={userName}
+        />
 
         <VStack flexGrow={1}>
           <Text fontSize={15} fontWeight="semibold" fontColor="#050505">
