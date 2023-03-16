@@ -3,13 +3,17 @@ import { createBoxComponent } from '../box';
 import { StackOptions, StackProps } from './_types';
 
 const createVerticalStackComponent = (props: StackProps): CSSObject[] => [
+  defaultVerticalStackStyles,
   ...createBoxComponent(props),
-  defaultVerticalStackStyles(props),
+  verticalStackStyles(props),
 ];
 
-const defaultVerticalStackStyles = (options: StackOptions): CSSObject => ({
-  flexDirection: options.reversed ? 'column-reverse' : 'column',
+const defaultVerticalStackStyles = {
   alignItems: 'stretch',
+};
+
+const verticalStackStyles = (options: StackOptions): CSSObject => ({
+  flexDirection: options.reversed ? 'column-reverse' : 'column',
   rowGap: options.spacing,
   columnGap: options.crossSpacing,
 });
