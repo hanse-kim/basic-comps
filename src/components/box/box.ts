@@ -13,7 +13,7 @@ import {
 } from 'src/core';
 import { BoxOptions, BoxProps } from './_types';
 
-export const createBoxComponent = (props: BoxProps): CSSObject[] => [
+const createBoxComponent = (props: BoxProps): CSSObject[] => [
   defaultBoxStyles(props),
   backgroundStyles(props),
   borderStyles(props),

@@ -1,9 +1,8 @@
 import { CSSObject, styled } from 'src/core';
-import { createBoxComponent } from '../box';
+import { Box } from '../box';
 import { TextOptions, TextProps } from './_types';
 
 const createTextComponent = (props: TextProps): CSSObject[] => [
-  ...createBoxComponent(props),
   defaultTextStyles,
   textStyles(props),
 ];
@@ -29,4 +28,4 @@ const linesStyles = (lines: number): CSSObject => ({
   WebkitBoxOrient: 'vertical',
 });
 
-export const Text = styled.p(createTextComponent);
+export const Text = styled(Box)(createTextComponent).withComponent('p');
