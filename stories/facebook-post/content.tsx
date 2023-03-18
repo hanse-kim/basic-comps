@@ -1,4 +1,4 @@
-import { Box, Text } from 'src';
+import { Box, TextGroup } from 'src';
 import { FacebookPostProps } from '.';
 
 type FacebookPostContentProps = Pick<FacebookPostProps, 'contentHtml'>;
@@ -8,7 +8,7 @@ export const FacebookPostContent = ({
 }: FacebookPostContentProps) => {
   return (
     <Box padding={[4, 16, 16]}>
-      <Box
+      <TextGroup
         fontSize={15}
         fontColor="#050505"
         whiteSpace="pre-wrap"

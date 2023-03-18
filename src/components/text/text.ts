@@ -1,6 +1,6 @@
 import { CSSObject, styled } from 'src/core';
-import { Box } from '../box';
-import { TextOptions, TextProps } from './_types';
+import { TextGroup } from './text-group';
+import { TextProps } from './_types';
 
 const createTextComponent = (props: TextProps): CSSObject[] => [
   defaultTextStyles,
@@ -11,7 +11,7 @@ const defaultTextStyles: CSSObject = {
   margin: 0,
 };
 
-const textStyles = (options: TextOptions): CSSObject => ({
+const textStyles = (options: TextProps): CSSObject => ({
   textDecoration: options.lineThrough
     ? 'line-through'
     : options.underline
@@ -28,4 +28,4 @@ const linesStyles = (lines: number): CSSObject => ({
   WebkitBoxOrient: 'vertical',
 });
 
-export const Text = styled(Box)(createTextComponent).withComponent('p');
+export const Text = styled(TextGroup)(createTextComponent).withComponent('p');

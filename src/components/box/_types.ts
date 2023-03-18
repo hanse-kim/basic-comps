@@ -5,7 +5,6 @@ import {
   FlexboxStyleProps,
   InteractivityStyleProps,
   LayoutStyleProps,
-  ParagraphStyleProps,
   PositionStyleProps,
   SpaceStyleProps,
   TransformStyleProps,
@@ -22,7 +21,6 @@ export type BoxProps = BoxOptions &
   EffectStyleProps &
   FlexboxStyleProps &
   LayoutStyleProps &
-  ParagraphStyleProps &
   SpaceStyleProps &
   TransformStyleProps &
   InteractivityStyleProps;

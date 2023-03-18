@@ -1,4 +1,4 @@
-import { Box } from 'src';
+import { TextGroup } from 'src';
 import { Size } from 'src/core';
 
 const icons = {
@@ -89,8 +89,8 @@ export const FacebookPostIcon = ({
   color = '#65676b',
 }: FacebookIconProps) => {
   return (
-    <Box size={size} color={color}>
+    <TextGroup size={size} color={color}>
       {icons[iconName]}
-    </Box>
+    </TextGroup>
   );
 };
