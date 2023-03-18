@@ -1,7 +1,7 @@
 import { Size } from 'src/core';
 import { BoxProps } from '../box';
 
-export type StackOptions = {
+type StackOptions = {
   /** It sets the spacing of items aligned on main axis. */
   spacing?: Size;
 
