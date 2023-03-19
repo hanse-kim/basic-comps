@@ -54,11 +54,11 @@ export const FacebookPostFooter = ({}: FacebookPostFooterProps) => {
               backgroundColor="#f0f2f5"
             >
               <Text fontColor="#65676b" fontSize={15} lineHeight={1.34}>
-                답변을 입력하세요...
+                Add a comment...
               </Text>
             </Box>
             <Text fontColor="#050505" fontSize={12}>
-              글을 게시하려면 Enter 키를 누르세요.
+              Press Enter to post a comment.
             </Text>
           </VStack>
         </HStack>
