@@ -1,6 +1,6 @@
 {
-  "name": "@hanse-kim/basic-components",
-  "version": "0.0.3",
+  "name": "hanse-ui",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "files": [
