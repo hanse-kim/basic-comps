@@ -1,4 +1,4 @@
-import { Border, CSSProperties, Size } from '../types';
+import { Border, CSSObject, CSSProperties, Size } from '../types';
 import { parseBorder, parseColor, parseSize } from '../utils';
 
 export type EffectStyleProps = {
@@ -15,7 +15,7 @@ export type EffectStyleProps = {
   outlineColor?: CSSProperties['outlineColor'];
 };
 
-export const effectStyles = (props: EffectStyleProps) => {
+export const effectStyles = (props: EffectStyleProps): CSSObject => {
   const {
     filter,
     backdropFilter,

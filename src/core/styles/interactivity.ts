@@ -1,4 +1,4 @@
-import { CSSProperties } from '../types';
+import { CSSObject, CSSProperties } from '../types';
 
 export type InteractivityStyleProps = {
   userSelect?: CSSProperties['userSelect'];
@@ -7,7 +7,9 @@ export type InteractivityStyleProps = {
   cursor?: CSSProperties['cursor'];
 };
 
-export const interactivityStyles = (props: InteractivityStyleProps) => {
+export const interactivityStyles = (
+  props: InteractivityStyleProps
+): CSSObject => {
   const { userSelect, pointerEvents, resize, cursor } = props;
 
   return {

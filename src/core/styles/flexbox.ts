@@ -1,4 +1,4 @@
-import { CSSProperties } from '../types';
+import { CSSObject, CSSProperties } from '../types';
 
 export type FlexboxStyleProps = {
   order?: CSSProperties['order'];
@@ -16,7 +16,7 @@ export type FlexboxStyleProps = {
   flexBasis?: CSSProperties['flexBasis'];
 };
 
-export const flexboxStyles = (props: FlexboxStyleProps) => {
+export const flexboxStyles = (props: FlexboxStyleProps): CSSObject => {
   const {
     order,
     justifyContent,

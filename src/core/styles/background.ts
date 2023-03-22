@@ -1,4 +1,4 @@
-import { CSSProperties, Size } from '../types';
+import { CSSObject, CSSProperties, Size } from '../types';
 import { parseColor, parseSize } from '../utils';
 
 export type BackgroundStyleProps = {
@@ -14,7 +14,7 @@ export type BackgroundStyleProps = {
   backgroundPositionY?: CSSProperties['backgroundPositionY'];
 };
 
-export const backgroundStyles = (props: BackgroundStyleProps) => {
+export const backgroundStyles = (props: BackgroundStyleProps): CSSObject => {
   const {
     background,
     backgroundColor,

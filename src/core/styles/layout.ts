@@ -1,4 +1,4 @@
-import { CSSProperties, Size } from '../types';
+import { CSSObject, CSSProperties, Size } from '../types';
 import { parseSize } from '../utils';
 
 export type LayoutStyleProps = {
@@ -21,7 +21,7 @@ export type LayoutStyleProps = {
   overflowY?: CSSProperties['overflowY'];
 };
 
-export const layoutStyles = (props: LayoutStyleProps) => {
+export const layoutStyles = (props: LayoutStyleProps): CSSObject => {
   const width = props.size || props.width;
   const height = props.size || props.height;
   const minWidth = props.minSize || props.minWidth;

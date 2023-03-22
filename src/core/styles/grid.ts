@@ -1,4 +1,4 @@
-import { CSSProperties, Size } from '../types';
+import { CSSObject, CSSProperties, Size } from '../types';
 import { parseSize } from '../utils';
 
 export type GridStyleProps = {
@@ -16,7 +16,7 @@ export type GridStyleProps = {
   gridRowGap?: Size;
 };
 
-export const gridStyles = (props: GridStyleProps) => {
+export const gridStyles = (props: GridStyleProps): CSSObject => {
   const {
     gridTemplate,
     gridTemplateAreas,

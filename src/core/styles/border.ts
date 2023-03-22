@@ -1,4 +1,4 @@
-import { Border, Size } from '../types';
+import { Border, CSSObject, Size } from '../types';
 import { parseBorder, parseSize } from '../utils';
 
 export type BorderStyleProps = {
@@ -10,7 +10,7 @@ export type BorderStyleProps = {
   borderRadius?: Size;
 };
 
-export const borderStyles = (props: BorderStyleProps) => {
+export const borderStyles = (props: BorderStyleProps): CSSObject => {
   const {
     border,
     borderTop,

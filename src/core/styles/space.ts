@@ -1,4 +1,4 @@
-import { Size, Space } from '../types';
+import { CSSObject, Size, Space } from '../types';
 import { getDefined, parseSpace } from '../utils';
 
 export type SpaceStyleProps = {
@@ -19,7 +19,7 @@ export type SpaceStyleProps = {
   paddingBottom?: Size;
 };
 
-export const spaceStyles = (props: SpaceStyleProps) => {
+export const spaceStyles = (props: SpaceStyleProps): CSSObject => {
   const margin = parseSpace(props.margin);
   const marginLeft = getDefined(props.marginLeft, props.marginX, margin.left);
   const marginRight = getDefined(

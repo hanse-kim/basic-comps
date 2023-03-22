@@ -1,4 +1,4 @@
-import { CSSProperties, Size, ZIndex } from '../types';
+import { CSSObject, CSSProperties, Size, ZIndex } from '../types';
 import { getDefined, parseSize, parseZIndex } from '../utils';
 
 export type PositionStyleProps = {
@@ -13,7 +13,7 @@ export type PositionStyleProps = {
   zIndex?: ZIndex;
 };
 
-export const positionStyles = (props: PositionStyleProps) => {
+export const positionStyles = (props: PositionStyleProps): CSSObject => {
   const { position, inset, insetX, insetY, zIndex } = props;
 
   const left = getDefined(props.left, insetX, inset);

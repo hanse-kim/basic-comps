@@ -1,4 +1,4 @@
-import { CSSProperties } from '../types';
+import { CSSObject, CSSProperties } from '../types';
 
 export type GridItemStyleProps = {
   gridArea?: CSSProperties['gridArea'];
@@ -12,7 +12,7 @@ export type GridItemStyleProps = {
   gridColumnEnd?: CSSProperties['gridColumnEnd'];
 };
 
-export const gridItemStyles = (props: GridItemStyleProps) => {
+export const gridItemStyles = (props: GridItemStyleProps): CSSObject => {
   const {
     gridArea,
     gridRow,

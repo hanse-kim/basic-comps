@@ -1,4 +1,4 @@
-import { CSSProperties } from '../types';
+import { CSSObject, CSSProperties } from '../types';
 
 export type TransitionStyleProps = {
   transition?: CSSProperties['transition'];
@@ -8,7 +8,7 @@ export type TransitionStyleProps = {
   transitionTimingFunction?: CSSProperties['transitionTimingFunction'];
 };
 
-export const transitionStyles = (props: TransitionStyleProps) => {
+export const transitionStyles = (props: TransitionStyleProps): CSSObject => {
   const {
     transition,
     transitionDelay,

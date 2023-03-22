@@ -1,4 +1,4 @@
-import { CSSProperties, Keyframes } from '../types';
+import { CSSObject, CSSProperties, Keyframes } from '../types';
 
 export type AnimationStyleProps = {
   animation?: CSSProperties['animation'];
@@ -11,7 +11,7 @@ export type AnimationStyleProps = {
   animationTimingFunction?: CSSProperties['animationTimingFunction'];
 };
 
-export const animationStyles = (props: AnimationStyleProps) => {
+export const animationStyles = (props: AnimationStyleProps): CSSObject => {
   const {
     animation,
     animationDuration,

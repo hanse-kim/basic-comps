@@ -1,4 +1,4 @@
-import { CSSProperties, FontWeight, Size } from '../types';
+import { CSSObject, CSSProperties, FontWeight, Size } from '../types';
 import { parseColor, parseFontWeight, parseSize } from '../utils';
 
 export type ParagraphStyleProps = {
@@ -16,7 +16,7 @@ export type ParagraphStyleProps = {
   textShadow?: CSSProperties['textShadow'];
 };
 
-export const paragraphStyles = (props: ParagraphStyleProps) => {
+export const paragraphStyles = (props: ParagraphStyleProps): CSSObject => {
   const {
     color,
     fontColor,
