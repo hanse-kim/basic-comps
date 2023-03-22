@@ -5,7 +5,6 @@ import {
   FlexboxStyleProps,
   InteractivityStyleProps,
   LayoutStyleProps,
-  PositionStyleProps,
   SpaceStyleProps,
   TransformStyleProps,
 } from 'src/core';
@@ -24,5 +23,3 @@ export type BoxProps = BoxOptions &
   SpaceStyleProps &
   TransformStyleProps &
   InteractivityStyleProps;
-
-export type PositionedBoxProps = BoxProps & PositionStyleProps;
