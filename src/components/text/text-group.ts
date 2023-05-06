@@ -1,8 +1,8 @@
 import { CSSObject, paragraphStyles, styled } from 'src/core';
 import { Box } from '../box';
-import { TextProps } from './_types';
+import { TextGroupProps } from './_types';
 
-const createTextComponent = (props: TextProps): CSSObject[] => [
+const createTextComponent = (props: TextGroupProps): CSSObject[] => [
   paragraphStyles(props),
 ];
 
