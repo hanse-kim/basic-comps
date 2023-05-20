@@ -8,6 +8,7 @@ import {
   SpaceStyleProps,
   TransformStyleProps,
 } from 'src/core';
+import { PseudoStyleProps } from 'src/core/styles/pseudo';
 
 export type BoxOptions = {
   relative?: boolean;
@@ -22,4 +23,5 @@ export type BoxProps = BoxOptions &
   LayoutStyleProps &
   SpaceStyleProps &
   TransformStyleProps &
-  InteractivityStyleProps;
+  InteractivityStyleProps &
+  PseudoStyleProps;

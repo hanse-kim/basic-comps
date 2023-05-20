@@ -10,6 +10,7 @@ import {
   styled,
   transformStyles,
 } from 'src/core';
+import { pseudoStyles } from 'src/core/styles/pseudo';
 import { BoxOptions, BoxProps } from './_types';
 
 export const Box = styled.div(createBoxComponent);
@@ -25,6 +26,7 @@ function createBoxComponent(props: BoxProps): CSSObject[] {
     spaceStyles(props),
     transformStyles(props),
     interactivityStyles(props),
+    pseudoStyles(props),
   ];
 }
 
