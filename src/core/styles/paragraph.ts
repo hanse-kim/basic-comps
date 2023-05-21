@@ -14,6 +14,7 @@ export type ParagraphStyleProps = {
   wordSpacing?: CSSProperties['wordSpacing'];
   lineHeight?: CSSProperties['lineHeight'];
   textShadow?: CSSProperties['textShadow'];
+  textDecoration?: CSSProperties['textDecoration'];
 };
 
 export const paragraphStyles = (props: ParagraphStyleProps): CSSObject => {
@@ -30,6 +31,7 @@ export const paragraphStyles = (props: ParagraphStyleProps): CSSObject => {
     wordSpacing,
     lineHeight,
     textShadow,
+    textDecoration,
   } = props;
 
   return {
@@ -44,5 +46,6 @@ export const paragraphStyles = (props: ParagraphStyleProps): CSSObject => {
     wordSpacing,
     lineHeight,
     textShadow,
+    textDecoration,
   };
 };
