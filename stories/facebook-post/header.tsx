@@ -22,11 +22,22 @@ export const FacebookPostHeader = ({
         />
 
         <VStack flexGrow={1}>
-          <Text fontSize={15} fontWeight="semibold" fontColor="#050505">
+          <Text
+            fontSize={15}
+            fontWeight="semibold"
+            fontColor="#050505"
+            cursor="pointer"
+            _hover={{ textDecoration: 'underline' }}
+          >
             {userName}
           </Text>
           <HStack>
-            <Text fontSize={13} fontColor="#65676b">
+            <Text
+              fontSize={13}
+              fontColor="#65676b"
+              cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}
+            >
               {createdAt.toDateString()}
             </Text>
             <Text fontSize={13} fontColor="#65676b" whiteSpace="pre-wrap">
@@ -36,7 +47,13 @@ export const FacebookPostHeader = ({
           </HStack>
         </VStack>
 
-        <Box size={36} centering>
+        <Box
+          size={36}
+          centering
+          borderRadius="full"
+          cursor="pointer"
+          _hover={{ backgroundColor: '#f0f2f5' }}
+        >
           <FacebookPostIcon iconName="more" size={20} />
         </Box>
       </HStack>
