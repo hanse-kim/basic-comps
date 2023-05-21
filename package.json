@@ -1,6 +1,7 @@
 {
-  "name": "hanse-ui",
-  "version": "0.1.0",
+  "name": "basic-comps",
+  "description": "A React component library for easy and fast markup",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
   "files": [
@@ -11,6 +12,16 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanse-kim/basic-comps.git"
+  },
+  "author": "Hanseul Kim <bluewood.truth@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanse-kim/basic-comps/issues"
+  },
+  "homepage": "https://github.com/hanse-kim/basic-comps#readme",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
