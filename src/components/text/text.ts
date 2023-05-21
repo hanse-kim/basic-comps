@@ -19,7 +19,7 @@ function textStyles(options: TextProps): CSSObject {
       : options.underline
       ? 'underline'
       : undefined,
-    ...(options.lines && linesStyles(options.lines)),
+    ...(options.ellipsisLines && linesStyles(options.ellipsisLines)),
   };
 }
 

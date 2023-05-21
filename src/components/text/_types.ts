@@ -6,7 +6,7 @@ export type TextGroupProps = BoxProps & ParagraphStyleProps;
 type TextOptions = {
   lineThrough?: boolean;
   underline?: boolean;
-  lines?: number;
+  ellipsisLines?: number;
 };
 
 export type TextProps = TextGroupProps & TextOptions;
