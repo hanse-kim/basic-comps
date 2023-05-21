@@ -36,7 +36,7 @@ function defaultBoxStyles(options: BoxOptions): CSSObject {
     flexDirection: 'column',
     alignItems: 'stretch',
     position: options.relative ? 'relative' : undefined,
-    ...(options.centering && {
+    ...(options.center && {
       justifyContent: 'center',
       alignItems: 'center',
     }),

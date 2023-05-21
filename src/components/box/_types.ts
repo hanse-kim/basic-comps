@@ -12,7 +12,7 @@ import { PseudoStyleProps } from 'src/core/styles/pseudo';
 
 export type BoxOptions = {
   relative?: boolean;
-  centering?: boolean;
+  center?: boolean;
 };
 
 export type BoxProps = BoxOptions &

@@ -49,7 +49,7 @@ export const FacebookPostHeader = ({
 
         <Box
           size={36}
-          centering
+          center
           borderRadius="full"
           cursor="pointer"
           _hover={{ backgroundColor: '#f0f2f5' }}

@@ -30,7 +30,7 @@ export const FackbookPostAvatar = ({
       ) : (
         <Box
           size="100%"
-          centering
+          center
           backgroundColor="#caccd2"
           boxShadow="inset 0 1px 1px rgba(0, 0, 0, 0.1)"
           borderRadius="full"
