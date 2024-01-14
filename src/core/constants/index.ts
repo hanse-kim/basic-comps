@@ -25,3 +25,8 @@ export const zIndices = {
   toast: 1600,
   tooltip: 1700,
 } as const;
+
+export const sizeAliasMap = {
+  px: '1px',
+  full: '9999px',
+} as const;

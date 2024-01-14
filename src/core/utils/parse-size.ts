@@ -1,12 +1,8 @@
-import { baseFontSize as defaultBaseFontSize } from '../constants';
-import { Size, SizeUnit } from '../types';
-
-const sizeAliasMap = {
-  px: '1px',
-  full: '9999px',
-} as const;
-
-export type SizeAlias = keyof typeof sizeAliasMap;
+import {
+  baseFontSize as defaultBaseFontSize,
+  sizeAliasMap,
+} from '../constants';
+import { Size, SizeAlias, SizeUnit } from '../types';
 
 export type ParseSizeOptions = {
   baseFontSize?: number;
